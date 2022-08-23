@@ -7,7 +7,7 @@
     "build": "SET NODE_OPTIONS=--openssl-legacy-provider && ng build",
     "watch": "SET NODE_OPTIONS=--openssl-legacy-provider && ng build --watch --configuration development",
     "test": "SET NODE_OPTIONS=--openssl-legacy-provider && ng test",
-    "deploy": "ng build --base-href=polarexpress/"
+    "deploy": "ng build --base-href=/"
   },
   "private": true,
   "dependencies": {

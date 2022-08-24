@@ -7,7 +7,7 @@
     "build": "SET NODE_OPTIONS=--openssl-legacy-provider && ng build",
     "watch": "SET NODE_OPTIONS=--openssl-legacy-provider && ng build --watch --configuration development",
     "test": "SET NODE_OPTIONS=--openssl-legacy-provider && ng test",
-    "deploy": "ng build --base-href=polarexpress"
+    "deploy": "ng build --base-href=/polarexpress/"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +22,9 @@
     "@angular/platform-browser-dynamic": "^14.1.0",
     "@angular/router": "^14.1.0",
     "@angular/service-worker": "^14.1.0",
+    "@ngx-translate/core": "^14.0.0",
+    "@ngx-translate/http-loader": "^7.0.0",
+    "ngx-translate": "^0.0.1-security",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

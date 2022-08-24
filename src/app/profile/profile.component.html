@@ -1,0 +1,113 @@
+<mat-accordion>
+    <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                {{'profile.title' | translate}}
+            </mat-panel-title>
+            <mat-panel-description>
+                {{'profile.description' | translate}}
+                <mat-icon>account_circle</mat-icon>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>{{'profile.firstname' | translate}}</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>{{'profile.lastname' | translate}}</mat-label>
+                <input matInput>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>{{'profile.username' | translate}}</mat-label>
+                <input matInput>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>{{'profile.email' | translate}}</mat-label>
+                <input matInput [formControl]="emailControl" type="email">
+                <mat-error *ngIf="emailControl.hasError('email') && !emailControl.hasError('required')">
+                    {{'profile.email_invalid' | translate}}
+                </mat-error>
+                <mat-error *ngIf="emailControl.hasError('required')">
+                    {{'profile.email_missing' | translate}}
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>{{'profile.age' | translate}}</mat-label>
+                <input matInput [formControl]="ageControl" type="number" min="13">
+                <mat-error *ngIf="ageControl.hasError('min') && !ageControl.hasError('required')">
+                    {{'profile.age_minimum' | translate}}
+                </mat-error>
+                <mat-error *ngIf="ageControl.hasError('required')">
+                    {{'profile.age_missing' | translate}}
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+        <mat-action-row>
+            <button mat-button color="primary" (click)="nextStep()">{{'profile.next' | translate}}</button>
+        </mat-action-row>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                {{'profile.streetline1_title' | translate}}
+            </mat-panel-title>
+            <mat-panel-description>
+                {{'profile.streetline1_desc' | translate}}
+                <mat-icon>map</mat-icon>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <mat-form-field appearance="fill">
+            <mat-label>{{'profile.streetline1_label'}}</mat-label>
+            <input matInput type="text" placeholder="{{'profile.streetline1_placeholder' | translate}}"
+                [formControl]="control" [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let street of filteredStreets | async" [value]="street">
+                    {{street}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+
+        <mat-action-row>
+            <button mat-button color="warn" (click)="prevStep()">{{'profile.previous' | translate}}</button>
+            <button mat-button color="primary" (click)="nextStep()">{{'profile.next' | translate}}</button>
+        </mat-action-row>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                {{'profile.birthday' | translate}}
+            </mat-panel-title>
+            <mat-panel-description>
+                {{'profile.birthday_desc' | translate}}
+                <mat-icon>date_range</mat-icon>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <mat-form-field appearance="fill">
+            <mat-label>{{'profile.birthday_label' | translate}}</mat-label>
+            <input matInput [matDatepicker]="picker" (focus)="picker.open()" readonly>
+        </mat-form-field>
+        <mat-datepicker #picker></mat-datepicker>
+
+        <mat-action-row>
+            <button mat-button color="warn" (click)="prevStep()">{{'profile.previous' | translate}}</button>
+            <button mat-button color="primary" (click)="nextStep()">{{'profile.end' | translate}}</button>
+        </mat-action-row>
+    </mat-expansion-panel>
+
+</mat-accordion>

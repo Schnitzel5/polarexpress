@@ -1,0 +1,29 @@
+{
+    "global": {},
+    "appbar": {
+        "login": "Log in",
+        "profile": "Your profile"
+    },
+    "profile": {
+        "next": "Next",
+        "previous": "Previous",
+        "end": "End",
+        "title": "Personal data",
+        "description": "Type your name and age",
+        "firstname": "First name",
+        "lastname": "Last name",
+        "username": "Username",
+        "email": "E-Mail",
+        "email_invalid": "The email is invalid!",
+        "email_missing": "The email is missing!",
+        "age": "Age",
+        "age_minimum": "You need to be at least 13 years old.",
+        "age_missing": "The age is missing!",
+        "streetline1_title": "Streetline 1",
+        "streetline1_desc": "Type the street name",
+        "streetline1_label": "Street",
+        "streetline1_placeholder": "Search for a street",
+        "birthday": "Birthday",
+        "birthday_desc": "Your birthday"
+    }
+}

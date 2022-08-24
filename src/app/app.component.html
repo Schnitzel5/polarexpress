@@ -5,11 +5,11 @@
     </button>
     <span routerLink="/">{{title}}</span>
     <span></span>
-    <button mat-button routerLink="/number-system">
-      <span>NumberSystem</span>
+    <button mat-button (click)="switchLanguage('en')">
+      <span>EN</span>
     </button>
-    <button mat-button routerLink="/medbw">
-      <span>medbW</span>
+    <button mat-button (click)="switchLanguage('de')">
+      <span>DE</span>
     </button>
     <span></span>
     <button mat-icon-button>
@@ -26,11 +26,11 @@
     </button>
     <button mat-menu-item routerLink="/login">
       <mat-icon>border_color</mat-icon>
-      <span>Log in</span>
+      <span>{{'appbar.login' | translate}}</span>
     </button>
     <button mat-menu-item routerLink="/profile">
       <mat-icon>account_circle</mat-icon>
-      <span>Your profile</span>
+      <span>{{'appbar.profile' | translate}}</span>
     </button>
   </mat-menu>
 </div>

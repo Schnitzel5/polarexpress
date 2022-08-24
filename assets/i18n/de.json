@@ -1,0 +1,29 @@
+{
+    "global": {},
+    "appbar": {
+        "login": "Anmelden",
+        "profile": "Dein Profil"
+    },
+    "profile": {
+        "next": "Weiter",
+        "previous": "Zurück",
+        "end": "Abschließen",
+        "title": "Persönliche Daten",
+        "description": "Gebe deinen Namen und dein Alter an",
+        "firstname": "Vorname",
+        "lastname": "Nachname",
+        "username": "Benutzername",
+        "email": "E-Mail",
+        "email_invalid": "Die E-Mail ist ungültig!",
+        "email_missing": "Die E-Mail fehlt!",
+        "age": "Alter",
+        "age_minimum": "Du musst mindestens 13 Jahre alt sein.",
+        "age_missing": "Dein Alter fehlt!",
+        "streetline1_title": "Straße",
+        "streetline1_desc": "Gebe deine Straße an",
+        "streetline1_label": "Straße",
+        "streetline1_placeholder": "Suche nach einer Straße",
+        "birthday": "Geburtstag",
+        "birthday_desc": "Dein Geburtstag"
+    }
+}

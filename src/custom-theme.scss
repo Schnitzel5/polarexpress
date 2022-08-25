@@ -10,25 +10,25 @@
 // have to load a single css file for Angular Material in your app.
 
 $fontConfig: (
-  display-4: mat-typography-level(112px, 112px, 300, 'Roboto', -0.0134em),
-  display-3: mat-typography-level(56px, 56px, 400, 'Roboto', -0.0089em),
-  display-2: mat-typography-level(45px, 48px, 400, 'Roboto', 0.0000em),
-  display-1: mat-typography-level(34px, 40px, 400, 'Roboto', 0.0074em),
-  headline: mat-typography-level(24px, 32px, 400, 'Arial', 0.0000em),
-  title: mat-typography-level(20px, 32px, 500, 'Arial', 0.0075em),
-  subheading-2: mat-typography-level(16px, 28px, 400, 'Arial', 0.0094em),
-  subheading-1: mat-typography-level(15px, 24px, 500, 'Arial', 0.0067em),
-  body-2: mat-typography-level(14px, 24px, 500, 'Arial', 0.0179em),
-  body-1: mat-typography-level(14px, 20px, 400, 'Arial', 0.0179em),
-  button: mat-typography-level(14px, 14px, 500, 'Roboto', 0.0893em),
-  caption: mat-typography-level(12px, 20px, 400, 'Roboto', 0.0333em),
-  input: mat-typography-level(inherit, 1.125, 400, 'Arial', 1.5px)
+  display-4: mat-typography-level(112px, 112px, 300, 'Rubik', -0.0134em),
+  display-3: mat-typography-level(56px, 56px, 400, 'Rubik', -0.0089em),
+  display-2: mat-typography-level(45px, 48px, 400, 'Rubik', 0.0000em),
+  display-1: mat-typography-level(34px, 40px, 400, 'Rubik', 0.0074em),
+  headline: mat-typography-level(24px, 32px, 400, 'Rubik', 0.0000em),
+  title: mat-typography-level(20px, 32px, 500, 'Rubik', 0.0075em),
+  subheading-2: mat-typography-level(16px, 28px, 400, 'Rubik', 0.0094em),
+  subheading-1: mat-typography-level(15px, 24px, 500, 'Rubik', 0.0067em),
+  body-2: mat-typography-level(14px, 24px, 500, 'Rubik', 0.0179em),
+  body-1: mat-typography-level(14px, 20px, 400, 'Rubik', 0.0179em),
+  button: mat-typography-level(14px, 14px, 500, 'Rubik', 0.0893em),
+  caption: mat-typography-level(12px, 20px, 400, 'Rubik', 0.0333em),
+  input: mat-typography-level(inherit, 1.125, 400, 'Rubik', 1.5px)
 );
 
 // Foreground Elements
 
 // Light Theme Text
-$dark-text: #224b3e;
+$dark-text: #442C2E;
 $dark-primary-text: rgba($dark-text, 0.87);
 $dark-accent-text: rgba($dark-primary-text, 0.54);
 $dark-disabled-text: rgba($dark-primary-text, 0.38);
@@ -55,7 +55,7 @@ $mat-light-theme-foreground: (
 );
 
 // Dark Theme text
-$light-text: #b9e4c9;
+$light-text: #442C2E;
 $light-primary-text: $light-text;
 $light-accent-text: rgba($light-primary-text, 0.7);
 $light-disabled-text: rgba($light-primary-text, 0.5);
@@ -83,7 +83,7 @@ $mat-dark-theme-foreground: (
 
 // Background config
 // Light bg
-$light-background: #fffbe6;
+$light-background: #FFFBFA;
 $light-bg-darker-5: darken($light-background, 5%);
 $light-bg-darker-10: darken($light-background, 10%);
 $light-bg-darker-20: darken($light-background, 20%);
@@ -145,7 +145,7 @@ $mat-dark-theme-background: (
 // Theme Config
 
 body {
-  --primary-color: #356859;
+  --primary-color: #FEDBD0;
   --primary-lighter-color: #c2d2cd;
   --primary-darker-color: #224b3e;
   --text-primary-color: #{$light-primary-text};
@@ -154,10 +154,10 @@ body {
 }
 
 $mat-primary: (
-  main: #356859,
+  main: #FEDBD0,
   lighter: #c2d2cd,
   darker: #224b3e,
-  200: #356859,
+  200: #FEDBD0,
   // For slide toggle,
   contrast : (main: $light-primary-text,
     lighter: $dark-primary-text,
@@ -168,7 +168,7 @@ $theme-primary: mat-palette($mat-primary, main, lighter, darker);
 
 
 body {
-  --accent-color: #b9e4c9;
+  --accent-color: #442C2E;
   --accent-lighter-color: #eaf7ef;
   --accent-darker-color: #a2d9b5;
   --text-accent-color: #{$dark-primary-text};
@@ -177,10 +177,10 @@ body {
 }
 
 $mat-accent: (
-  main: #b9e4c9,
+  main: #442C2E,
   lighter: #eaf7ef,
   darker: #a2d9b5,
-  200: #b9e4c9,
+  200: #442C2E,
   // For slide toggle,
   contrast : (main: $dark-primary-text,
     lighter: $dark-primary-text,

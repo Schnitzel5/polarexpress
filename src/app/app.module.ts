@@ -16,12 +16,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDatepickerModule } from "@angular/material/datepicker";
 import { MatNativeDateModule, MatOptionModule } from "@angular/material/core";
 import { MatAutocompleteModule } from "@angular/material/autocomplete";
+import { MatGridListModule } from '@angular/material/grid-list';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { LoginComponent } from './login/login.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -31,6 +33,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [
     AppComponent,
     ProfileComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,6 +66,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatNativeDateModule,
     MatOptionModule,
     MatAutocompleteModule,
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

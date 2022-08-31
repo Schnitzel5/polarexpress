@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { ThemeService } from './theme.service';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class AppComponent {
   title = 'PolarExpress';
   footer: string[] = [];
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService, private themes: ThemeService) {
     this.translate.setDefaultLang('en');
     for (let i = 0; i < 12; i++) {
       this.footer.push('Test');
@@ -17,5 +18,8 @@ export class AppComponent {
   }
   switchLanguage(lang: string) {
     this.translate.use(lang);
+  }
+  switchTheme(theme: string) {
+    this.themes.switchTheme(theme);
   }
 }

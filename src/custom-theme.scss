@@ -1,5 +1,34 @@
 //@import 'shrine.scss';
+@import '~@angular/material/theming';
+
+@include mat-core();
+
 @import 'basil.scss';
+@import 'shrine.scss';
+
+.basil {
+  @include angular-material-theme($basil);
+  @include mat-core($basilFontConfig);
+}
+
+.shrine {
+  @include angular-material-theme($shrine);
+  @include mat-core($shrineFontConfig);
+}
+
+.mat-raised-button,
+.mat-stroked-button,
+.mat-flat-button {
+  padding: 0 1.15em;
+  margin: 0 .65em;
+  min-width: 3em;
+  line-height: 36.4px
+}
+
+.mat-standard-chip {
+  padding: .5em .85em;
+  min-height: 2.5em;
+}
 
 .material-icons {
   font-size: 24px;

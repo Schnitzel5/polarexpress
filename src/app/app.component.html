@@ -18,6 +18,14 @@
     <button mat-icon-button>
       <mat-icon>share</mat-icon>
     </button>
+    <span></span>
+    <span>| Themes</span>
+    <button mat-button (click)="switchTheme('basil')">
+      <span>Basil</span>
+    </button>
+    <button mat-button (click)="switchTheme('shrine')">
+      <span>Shrine</span>
+    </button>
   </mat-toolbar>
   <mat-menu #menu="matMenu">
     <button mat-menu-item routerLink="">
@@ -37,6 +45,6 @@
 <router-outlet></router-outlet>
 <mat-grid-list cols="3" rowHeight="3:1">
   <mat-grid-tile *ngFor="let e of footer">
-    Test
+    <span>Test</span>
   </mat-grid-tile>
 </mat-grid-list>

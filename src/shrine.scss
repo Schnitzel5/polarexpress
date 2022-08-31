@@ -1,6 +1,6 @@
 @import '~@angular/material/theming';
 
-$fontConfig: (
+$shrineFontConfig: (
     display-4: mat-typography-level(112px, 112px, 300, 'Rubik', -0.0134em),
     display-3: mat-typography-level(56px, 56px, 400, 'Rubik', -0.0089em),
     display-2: mat-typography-level(45px, 48px, 400, 'Rubik', 0.0000em),
@@ -122,8 +122,6 @@ $mat-dark-theme-background: (
     disabled-list-option: $dark-bg-lighter-10,
 );
 
-@include mat-core($fontConfig);
-
 body {
     --primary-color: #FEDBD0;
     --primary-lighter-color: #c2d2cd;
@@ -191,12 +189,3 @@ $theme-warn: mat-palette($mat-warn, main, lighter, darker);
 ;
 
 $shrine: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
-$shrine-dark: mat-dark-theme($theme-primary, $theme-accent, $theme-warn);
-
-.shrine {
-    @include angular-material-theme($shrine);
-}
-
-.shrine-dark {
-    @include angular-material-theme($shrine-dark);
-}
